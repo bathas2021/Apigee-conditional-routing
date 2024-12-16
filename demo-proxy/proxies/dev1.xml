@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="dev1">
+  <Description/>
+  <FaultRules/>
+  <PreFlow name="PreFlow">
+    <Request>
+      <Step>
+      </Step>
+    </Request>
+    <Response/>
+  </PreFlow>
+  <PostFlow name="PostFlow">
+    <Request/>
+    <Response/>
+  </PostFlow>
+  <Flows/>
+  <HTTPProxyConnection>
+    <BasePath>/service</BasePath>
+    <Properties/>
+    <VirtualHost>default</VirtualHost>
+  </HTTPProxyConnection>
+  <RouteRule name="svc-1">
+    <TargetEndpoint>svc-1</TargetEndpoint>
+    <Condition>(proxy.pathsuffix MatchesPath "/path1/**") AND (request.header.host Matches "dev.example.com")</Condition>
+  </RouteRule>
+  <RouteRule name="svc-2">
+    <TargetEndpoint>svc-2</TargetEndpoint>
+    <Condition>(proxy.pathsuffix MatchesPath "/path2/**") AND (request.header.host Matches "dev.example.com")</Condition>
+  </RouteRule>
+  <RouteRule name="svc-3">
+    <TargetEndpoint>svc-3</TargetEndpoint>
+    <Condition>(proxy.pathsuffix MatchesPath "/path3/**") AND (request.header.host Matches "dev.example.com")</Condition>
+  </RouteRule>
+  <RouteRule name="svc-4">
+    <TargetEndpoint>svc-4</TargetEndpoint>
+    <Condition>(proxy.pathsuffix MatchesPath "/path4/**") AND (request.header.host Matches "dev.example.com")</Condition>
+  </RouteRule>
+  <RouteRule name="svc-5">
+    <TargetEndpoint>svc-5</TargetEndpoint>
+    <Condition>(proxy.pathsuffix MatchesPath " /path5/**") AND (request.header.host Matches "dev.example.com")</Condition>
+  </RouteRule>
+</ProxyEndpoint>

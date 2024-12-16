@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="2" name="demo-proxy">
+  <DisplayName/>
+  <Description/>
+  <CreatedAt>1733939629468</CreatedAt>
+  <LastModifiedAt>1733939629468</LastModifiedAt>
+  <BasePaths>/dev1</BasePaths>
+  <ProxyEndpoints>
+    <ProxyEndpoint>dev1</ProxyEndpoint>
+  </ProxyEndpoints>
+  <TargetEndpoints>
+    <TargetEndpoint>svc-1</TargetEndpoint>
+    <TargetEndpoint>svc-2</TargetEndpoint>
+    <TargetEndpoint>svc-3</TargetEndpoint>
+    <TargetEndpoint>svc-4</TargetEndpoint>
+    <TargetEndpoint>svc-5</TargetEndpoint>
+  </TargetEndpoints>
+</APIProxy>
